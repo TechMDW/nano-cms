@@ -1,0 +1,101 @@
+.page {
+  max-width: clamp(20em, 100%, 40em);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  gap: 3em;
+
+  > .header {
+    width: inherit;
+    text-align: center;
+    > .title {
+      font-size: 2em;
+    }
+
+    > .subtitle {
+      font-size: 1em;
+      color: var(--gray);
+    }
+  }
+
+  > .form {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+
+    > .inputfield {
+      width: 100%;
+      background: #3a3a3c;
+      padding: 1em;
+      border-radius: 1em;
+      outline: none;
+      border: none;
+
+      &::placeholder {
+        color: var(--light-gray);
+      }
+    }
+
+    > .link,
+    > .primaryLink {
+      width: 100%;
+      text-align: right;
+      text-decoration: none;
+      color: var(--gray);
+      margin-bottom: 2em;
+
+      &:hover {
+        color: var(--light-gray);
+      }
+    }
+
+    > .text {
+      width: inherit;
+      text-align: center;
+      color: var(--gray);
+
+      > .primaryLink {
+        color: var(--secondary);
+        width: inherit;
+        text-align: right;
+        text-decoration: none;
+        margin-bottom: 2em;
+        &:hover {
+          color: var(--tertiary);
+        }
+      }
+    }
+
+    > .button,
+    > .samlButton {
+      width: 100%;
+      background: var(--secondary);
+      padding: 1em;
+      border-radius: 1em;
+      outline: none;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background: var(--tertiary);
+      }
+    }
+
+    > .samlButton {
+      background: var(--white);
+      color: var(--black);
+
+      &:hover {
+        background: var(--light-gray);
+      }
+    }
+  }
+}
